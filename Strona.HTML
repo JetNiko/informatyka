@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sand Cuisine - The Professional's Guide to Eating Sand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .sand-bg {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2Y1ZDU5YiI+PC9yZWN0PjxyZWN0IHg9IjIwIiB5PSIyMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZjVkNTliIj48L3JlY3Q+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIj48L3JlY3Q+PC9zdmc+');
+        }
+        .sand-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .sand-btn {
+            background: linear-gradient(135deg, #f5d59b 0%, #d4a373 100%);
+            transition: all 0.3s ease;
+        }
+        .sand-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .sand-texture {
+            position: relative;
+            overflow: hidden;
+        }
+        .sand-texture::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuMSI+PC9yZWN0PjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSI+PC9yZWN0Pjwvc3ZnPg==');
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="sand-bg min-h-screen font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white bg-opacity-90 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-utensils text-amber-600 text-2xl"></i>
+                    <span class="text-xl font-bold text-amber-800">Sand Cuisine</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-amber-800 hover:text-amber-600 font-medium">About</a>
+                    <a href="#types" class="text-amber-800 hover:text-amber-600 font-medium">Sand Types</a>
+                    <a href="#techniques" class="text-amber-800 hover:text-amber-600 font-medium">Techniques</a>
+                    <a href="#testimonials" class="text-amber-800 hover:text-amber-600 font-medium">Testimonials</a>
+                    <a href="#contact" class="text-amber-800 hover:text-amber-600 font-medium">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-amber-800 text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold text-amber-900 mb-6">Elevate Your Sand Dining Experience</h1>
+                <p class="text-lg text-amber-800 mb-8">Discover the art of gourmet sand consumption with our professional guidance and premium sand selection.</p>
+                <div class="flex space-x-4">
+                    <button class="sand-btn px-8 py-3 rounded-full text-white font-bold shadow-lg">Join Our Club</button>
+                    <button class="border-2 border-amber-600 px-8 py-3 rounded-full text-amber-800 font-bold hover:bg-amber-50">Learn More</button>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="sand-card rounded-2xl p-6 shadow-xl max-w-md mx-auto">
+                    <div class="sand-texture rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517940311422-7fde9f3a5f1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Gourmet sand on a plate" class="w-full rounded-lg">
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="text-xl font-bold text-amber-900">Today's Special</h3>
+                        <p class="text-amber-800 mt-2">Hawaiian Black Volcanic Sand with a hint of sea salt</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-2xl font-bold text-amber-700">$24.99</span>
+                            <button class="sand-btn px-4 py-2 rounded-full text-white font-medium">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 bg-white bg-opacity-90">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">About Sand Cuisine</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="sand-texture rounded-xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1560713781-d55e8a05a1a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Person enjoying sand" class="w-full">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-amber-800 mb-6">Our Mission</h3>
+                    <p class="text-gray-700 mb-6">At Sand Cuisine, we believe that sand consumption should be an elevated experience. Our team of certified sand sommeliers has spent decades perfecting the art of sand selection, preparation, and presentation.</p>
+                    <p class="text-gray-700 mb-6">We source only the finest sands from around the globe, ensuring optimal texture, mineral content, and mouthfeel for the discerning sand connoisseur.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                            <span class="text-gray-700">100% Organic Sand</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                            <span class="text-gray-700">Gluten-Free</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                            <span class="text-gray-700">Vegan-Friendly</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                            <span class="text-gray-700">Sustainable Harvesting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sand Types Section -->
+    <section id="types" class="py-16 px-6 bg-amber-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Premium Sand Varieties</h2>
+                <p class="text-amber-800 max-w-2xl mx-auto">Explore our curated selection of the world's finest edible sands</p>
+                <div class="w-24 h-1 bg-amber-600 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Sand Card 1 -->
+                <div class="sand-card rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="sand-texture rounded-lg overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1509316785289-025f5b8b4b22?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="White sand" class="w-full h-48 object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-2">Sahara Silica</h3>
+                    <p class="text-gray-700 mb-4">Finely ground silica with a delicate mouthfeel and subtle mineral notes. Perfect for beginners.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-amber-700">$19.99/lb</span>
+                        <button class="sand-btn px-4 py-2 rounded-full text-white text-sm">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Sand Card 2 -->
+                <div class="sand-card rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="sand-texture rounded-lg overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1526666923127-b2970f64b422?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Black sand" class="w-full h-48 object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-2">Volcanic Noir</h3>
+                    <p class="text-gray-700 mb-4">Rich, mineral-dense volcanic sand with a bold texture and earthy undertones.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-amber-700">$29.99/lb</span>
+                        <button class="sand-btn px-4 py-2 rounded-full text-white text-sm">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Sand Card 3 -->
+                <div class="sand-card rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="sand-texture rounded-lg overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Pink sand" class="w-full h-48 object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-2">Bermuda Blush</h3>
+                    <p class="text-gray-700 mb-4">Rare pink foraminifera sand with a slightly sweet finish and exceptional mouthfeel.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-amber-700">$49.99/lb</span>
+                        <button class="sand-btn px-4 py-2 rounded-full text-white text-sm">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button class="border-2 border-amber-600 px-8 py-3 rounded-full text-amber-800 font-bold hover:bg-white">View All Varieties</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Techniques Section -->
+    <section id="techniques" class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Professional Sand Consumption Techniques</h2>
+                <p class="text-amber-800 max-w-2xl mx-auto">Master the art of sand dining with our expert-approved methods</p>
+                <div class="w-24 h-1 bg-amber-600 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Technique 1 -->
+                <div class="sand-card rounded-xl p-6 text-center">
+                    <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-hand-holding-water text-amber-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-3">The Moist Method</h3>
+                    <p class="text-gray-700">Lightly moisten sand for improved cohesion and reduced grittiness. Ideal for beginners.</p>
+                </div>
+                
+                <!-- Technique 2 -->
+                <div class="sand-card rounded-xl p-6 text-center">
+                    <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-fire text-amber-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-3">Toasted Texture</h3>
+                    <p class="text-gray-700">Gently toast sand to enhance nutty flavors and create a satisfying crunch.</p>
+                </div>
+                
+                <!-- Technique 3 -->
+                <div class="sand-card rounded-xl p-6 text-center">
+                    <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-layer-group text-amber-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-3">Layered Approach</h3>
+                    <p class="text-gray-700">Alternate sand with thin slices of fruit for a sophisticated flavor profile.</p>
+                </div>
+                
+                <!-- Technique 4 -->
+                <div class="sand-card rounded-xl p-6 text-center">
+                    <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-wine-glass-alt text-amber-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-3">Sommelier Pairing</h3>
+                    <p class="text-gray-700">Match sand varieties with complementary beverages for maximum enjoyment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 px-6 bg-amber-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">What Our Clients Say</h2>
+                <p class="text-amber-800 max-w-2xl mx-auto">Don't just take our word for it - hear from our satisfied sand enthusiasts</p>
+                <div class="w-24 h-1 bg-amber-600 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="sand-card rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-amber-700"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-amber-900">Michael B.</h4>
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"I was skeptical at first, but the Volcanic Noir changed my life. The texture is incredible and the mineral content gives me energy all day!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="sand-card rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-amber-700"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-amber-900">Sarah L.</h4>
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"As a professional sand taster, I can confidently say Sand Cuisine offers the highest quality product on the market. Their sourcing is impeccable."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="sand-card rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-amber-700"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-amber-900">David R.</h4>
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"The Bermuda Blush is worth every penny. I serve it at all my dinner parties and my guests are always amazed at the complex flavor profile."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 px-6 bg-amber-800 text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Join Our Sand Club</h2>
+            <p class="text-xl mb-8">Subscribe to receive exclusive sand offers, new variety announcements, and professional consumption tips.</p>
+            <div class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-full focus:outline-none text-gray-900">
+                <button class="bg-white text-amber-800 px-8 py-3 rounded-full font-bold hover:bg-amber-100 transition">Subscribe</button>
+            </div>
+            <p class="text-amber-200 mt-4 text-sm">We promise not to flood your inbox with sand... just the good stuff.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Contact Our Sand Experts</h2>
+                <p class="text-amber-800 max-w-2xl mx-auto">Have questions about sand consumption? Our team is here to help.</p>
+                <div class="w-24 h-1 bg-amber-600 mx-auto mt-4"></div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-amber-800 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-amber-800 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-amber-800 font-medium mb-2">Subject</label>
+                            <select id="subject" class="w-full px-4 py-3 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                <option>General Inquiry</option>
+                                <option>Bulk Order</option>
+                                <option>Sand Consultation</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-amber-800 font-medium mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        <button type="submit" class="sand-btn w-full py-3 rounded-lg text-white font-bold">Send Message</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="sand-card p-8 rounded-xl h-full">
+                        <h3 class="text-2xl font-bold text-amber-900 mb-6">Sand Cuisine Headquarters</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-amber-600 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold text-amber-800">Address</h4>
+                                    <p class="text-gray-700">123 Desert Way<br>Sand City, CA 90210</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt text-amber-600 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold text-amber-800">Phone</h4>
+                                    <p class="text-gray-700">(555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-amber-600 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold text-amber-800">Email</h4>
+                                    <p class="text-gray-700">info@sandcuisine.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-amber-600 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold text-amber-800">Hours</h4>
+                                    <p class="text-gray-700">Monday-Friday: 9am-5pm PST<br>Saturday: 10am-2pm PST</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-bold text-amber-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 hover:bg-amber-200"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 hover:bg-amber-200"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 hover:bg-amber-200"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 hover:bg-amber-200"><i class="fab fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-utensils text-amber-300 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Sand Cuisine</span>
+                    </div>
+                    <p class="text-amber-200">Elevating sand consumption to an art form since 2010.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-amber-200 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-amber-200 hover:text-white">About</a></li>
+                        <li><a href="#types" class="text-amber-200 hover:text-white">Sand Types</a></li>
+                        <li><a href="#techniques" class="text-amber-200 hover:text-white">Techniques</a></li>
+                        <li><a href="#contact" class="text-amber-200 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-amber-200 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-amber-200 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-amber-200 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="#" class="text-amber-200 hover:text-white">Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-amber-200 mb-4">Subscribe for sand tips and exclusive offers.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-full text-gray-900 w-full focus:outline-none">
+                        <button class="bg-amber-600 px-4 py-2 rounded-r-full hover:bg-amber-700"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-800 mt-12 pt-8 text-center text-amber-300">
+                <p>&copy; 2023 Sand Cuisine. All rights reserved. | Professional sand consumption since 2010.</p>
+                <p class="mt-2 text-sm">Disclaimer: Sand Cuisine is a parody website. Please don't actually eat sand.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for mobile menu toggle (would be expanded in a real implementation)
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const menu = document.querySelector('.hidden.md\\:flex');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            menu.classList.toggle('flex-col');
+            menu.classList.toggle('absolute');
+            menu.classList.toggle('top-16');
+            menu.classList.toggle('left-0');
+            menu.classList.toggle('right-0');
+            menu.classList.toggle('bg-white');
+            menu.classList.toggle('p-4');
+            menu.classList.toggle('space-y-4');
+            menu.classList.toggle('shadow-md');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
